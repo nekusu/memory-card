@@ -1,7 +1,7 @@
 import Button from './Button';
 import GithubButton from './GithubButton';
 
-function Home() {
+function Home({ play }) {
   return (
     <div className="Home">
       <div className="HowToPlay">
@@ -9,9 +9,9 @@ function Home() {
         <p>Don&apos;t click on the same card more than once!</p>
       </div>
       <div className="Difficulty">
-        <Button label="EASY" />
-        <Button label="MEDIUM" />
-        <Button label="HARD" />
+        <Button label="EASY" handleClick={() => play(0)} />
+        <Button label="MEDIUM" handleClick={() => play(1)} />
+        <Button label="HARD" handleClick={() => play(2)} />
       </div>
       <GithubButton username="nekusu" />
     </div>
