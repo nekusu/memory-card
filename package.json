@@ -8,7 +8,9 @@
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
     "react-scripts": "^5.0.1",
-    "sass": "^1.52.1"
+    "react-wavify": "^1.5.7",
+    "sass": "^1.52.1",
+    "uniqid": "^5.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
