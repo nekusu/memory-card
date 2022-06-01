@@ -1,0 +1,9 @@
+@use 'header';
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top, #38498e, #181a41, #111220);
+}
