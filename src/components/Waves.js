@@ -42,6 +42,7 @@ function Waves() {
         <Wave
           key={key}
           fill={`url(#${key}-gradient)`}
+          opacity={0.95}
           options={{
             ...options,
             height: 40,
