@@ -1,0 +1,56 @@
+@use 'colors';
+@use 'button';
+
+.Home {
+  margin-top: 7.5vh;
+  margin-inline: 20px;
+  font-family: 'Kumbh Sans';
+  text-align: center;
+
+  .HowToPlay {
+    padding: 20px 25px;
+    background-color: colors.$bg;
+    border: 3px solid colors.$border-alt;
+    border-radius: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1),
+      0 12px 20px rgba(0, 0, 0, 0.15);
+
+    h2 {
+      margin-bottom: 10px;
+      color: colors.$text;
+      font-size: 22px;
+    }
+
+    p {
+      color: colors.$fill;
+      font-size: 17px;
+    }
+  }
+
+  .Difficulty {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .Button {
+      @extend %button;
+      width: 120px;
+    }
+  }
+
+  .GithubButton {
+    @extend %button;
+    margin-inline: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    z-index: 1;
+    background-color: #0a2b0d;
+    border-color: #2f550e;
+    text-decoration: none;
+  }
+}
