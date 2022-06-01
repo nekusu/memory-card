@@ -1,11 +1,20 @@
 @use 'colors';
 @use 'button';
 
+.playing .Home {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .Home {
   margin-top: 7.5vh;
   margin-inline: 20px;
+  position: relative;
+  z-index: 2;
   font-family: 'Kumbh Sans';
   text-align: center;
+  transition: opacity .25s;
+  animation: fadeIn 1s;
 
   .HowToPlay {
     padding: 20px 25px;
@@ -48,7 +57,6 @@
     left: 0;
     right: 0;
     bottom: 25px;
-    z-index: 1;
     background-color: #0a2b0d;
     border-color: #2f550e;
     text-decoration: none;

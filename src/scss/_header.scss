@@ -1,5 +1,23 @@
 @use 'colors';
 
+.playing header {
+  img {
+    transform: scale(.75);
+    cursor: pointer;
+
+    &:active {
+      transform: scale(.7);
+      transition: transform .2s;
+    }
+  }
+
+  h1 {
+    transform: translateY(-3.5vh) scale(.75);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 header {
   width: 95%;
   max-width: 700px;
@@ -9,9 +27,12 @@ header {
   left: 0;
   right: 0;
   user-select: none;
+  animation: slideIn 1.5s;
 
   img {
     width: 100%;
+    transform-origin: top;
+    transition: transform .5s;
   }
 
   h1 {
@@ -29,5 +50,6 @@ header {
       0 -2.25px colors.$outline,
       2.25px 0 colors.$outline,
       -2.25px 0 colors.$outline;
+    transition: transform .3s, opacity .3s;
   }
 }

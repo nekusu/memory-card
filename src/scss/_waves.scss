@@ -1,11 +1,15 @@
 $offset: 12.5%;
 
+.playing .Waves {
+  height: 15vh;
+}
+
 .Waves {
   height: 30vh;
   width: 100%;
   position: fixed;
   bottom: 0;
-  transition: height .5s;
+  transition: height 1.5s;
 
   * {
     height: 100%;
