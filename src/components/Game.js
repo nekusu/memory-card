@@ -17,7 +17,7 @@ function Game(props) {
     setIsGameOver,
   } = props;
   const characters = useRef([]);
-  const [visibleCharacters, setvisibleCharacters] = useState([]);
+  const [visibleCharacters, setVisibleCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ function Game(props) {
         clicked += +character.isClicked;
       }
     }
-    setvisibleCharacters(shuffled);
+    setVisibleCharacters(shuffled);
   };
   const clickCharacter = (id) => {
     const character = characters.current.find(character => character.id === id);
