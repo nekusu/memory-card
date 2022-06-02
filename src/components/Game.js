@@ -14,15 +14,15 @@ function Game(props) {
     difficulty,
     score,
     setScore,
+    setIsGameOver,
   } = props;
   const characters = useRef([]);
   const [visibleCharacters, setvisibleCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const characterCount = 10 * (difficulty + 1);
     const characterIds = new Set();
-    while (characterIds.size < characterCount) {
+    while (characterIds.size < difficulty) {
       characterIds.add(randomId());
     }
     const loadCharacters = async (ids) => {
@@ -57,16 +57,15 @@ function Game(props) {
   const clickCharacter = (id) => {
     const character = characters.current.find(character => character.id === id);
     if (character.isClicked) {
-      console.log('you lose');
-      return;
+      setIsGameOver(true);
     } else {
       character.isClicked = true;
       setScore(score + 1);
-    }
-    if (characters.current.every(character => character.isClicked)) {
-      console.log('you win');
-    } else {
-      shuffleCharacters();
+      if (characters.current.every(character => character.isClicked)) {
+        setIsGameOver(true);
+      } else {
+        shuffleCharacters();
+      }
     }
   };
 

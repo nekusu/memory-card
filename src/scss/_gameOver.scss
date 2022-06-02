@@ -1,0 +1,29 @@
+@use 'button';
+
+.GameOver {
+  z-index: 2;
+
+  img {
+    width: 40vw;
+    max-width: 200px;
+    margin-top: 30vh;
+    position: relative;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.15));
+    animation: slideIn 1.5s;
+
+    &[alt="Rick"] {
+      margin-left: -20px;
+    }
+  }
+
+  .PlayAgain {
+    @extend %button;
+    margin-inline: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 7.5vh;
+    background-color: #0a2b0d;
+    border-color: #2f550e;
+  }
+}

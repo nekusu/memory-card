@@ -1,7 +1,11 @@
-$offset: 12.5%;
+$offset: 2.5vh;
 
 .playing .Waves {
-  height: 15vh;
+  height: 20vh;
+}
+
+.gameOver .Waves {
+  height: 65vh;
 }
 
 .Waves {
@@ -20,10 +24,10 @@ $offset: 12.5%;
   }
 
   *:first-child {
-    height: 100% + $offset;
+    height: calc(100% + $offset);
   }
 
   *:last-child {
-    height: 100% - $offset;
+    height: calc(100% - $offset);
   }
 }

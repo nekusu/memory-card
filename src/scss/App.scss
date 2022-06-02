@@ -2,6 +2,7 @@
 @use 'header';
 @use 'home';
 @use 'game';
+@use 'gameOver';
 @use 'waves';
 
 .App {
@@ -12,7 +13,8 @@
   background: linear-gradient(to top, #38498e, #181a41, #111220);
 
   .Home,
-  .Game {
+  .Game,
+  .GameOver {
     width: fit-content;
     margin: auto;
     padding-top: 40px;
