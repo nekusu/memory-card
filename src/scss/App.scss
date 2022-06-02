@@ -1,8 +1,9 @@
+@use 'custom-text';
 @use 'colors';
 @use 'header';
 @use 'home';
 @use 'game';
-@use 'gameOver';
+@use 'game-over';
 @use 'waves';
 
 .App {
@@ -31,22 +32,10 @@
   }
 
   .Score {
+    @extend %custom-text;
     position: fixed;
     top: min(calc(15vh + 10vw), 240px);
-    color: colors.$fill;
     font-size: min(8vw, 40px);
-    font-family: 'Fredoka One';
-    text-align: center;
-    -webkit-text-stroke: colors.$border 1.5px;
-    text-shadow: 2px 2px colors.$outline,
-      2px -2px colors.$outline,
-      -2px 2px colors.$outline,
-      -2px -2px colors.$outline,
-      0 2.25px colors.$outline,
-      0 -2.25px colors.$outline,
-      2.25px 0 colors.$outline,
-      -2.25px 0 colors.$outline;
-    transition: transform .3s, opacity .3s;
     animation: slideIn 1s;
   }
 }

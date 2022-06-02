@@ -1,6 +1,8 @@
+@use 'box';
 @use 'colors';
 
 %button {
+  @extend %box;
   @extend %hover;
   @extend %active;
   width: fit-content;
@@ -9,27 +11,35 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: colors.$bg;
-  color: colors.$text;
-  border: 3px solid colors.$border-alt;
-  border-radius: 25px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1),
-    0 12px 20px rgba(0, 0, 0, 0.15);
   font-size: 16px;
   font-weight: bold;
-  font-family: 'Kumbh Sans';
-  cursor: pointer;
-  transition: transform .2s;
+  text-decoration: none;
 
   svg {
     margin-inline: -2px;
   }
 }
 
-%hover:hover {
-  transform: scale(1.1);
+%button-alt {
+  @extend %button;
+  background-color: #0a2b0d;
+  border-color: #2f550e;
 }
 
-%active:active {
-  transform: scale(.975);
+%hover {
+  cursor: pointer;
+  transition: transform .2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+%active {
+  cursor: pointer;
+  transition: transform .2s;
+
+  &:active {
+    transform: scale(.975);
+  }
 }

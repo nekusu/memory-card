@@ -1,11 +1,9 @@
-@use 'colors';
+@use 'box';
 @use 'button';
-
-$shadow: 0 2px 6px rgba(0, 0, 0, 0.1),
-  0 12px 20px rgba(0, 0, 0, 0.15);
+@use 'colors';
 
 .Cards {
-  margin-top: 50px;
+  margin-top: 8vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -22,36 +20,27 @@ $shadow: 0 2px 6px rgba(0, 0, 0, 0.1),
     flex: 1 1;
     position: relative;
     border-radius: 25px;
-    cursor: pointer;
     user-select: none;
-    transition: transform .2s;
 
     img {
+      @extend %box;
       height: 100%;
       width: 100%;
       object-fit: cover;
-      border: 3px solid colors.$border-alt;
       outline: 4px solid transparent;
-      border-radius: 25px;
       border-bottom-left-radius: 5px;
-      box-shadow: $shadow;
       transition: outline .25s;
     }
 
     .Name {
+      @extend %box;
       max-width: 95%;
       position: absolute;
       bottom: -14px;
       padding: 8px 18px;
-      background-color: colors.$bg;
-      color: colors.$text;
-      border: 3px solid colors.$border-alt;
-      border-radius: 25px;
       border-top-left-radius: 0;
-      box-shadow: $shadow;
       font-size: min(3vw, 15px);
       font-weight: bold;
-      font-family: 'Kumbh Sans';
     }
 
     &:hover {

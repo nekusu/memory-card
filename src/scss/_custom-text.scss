@@ -1,0 +1,18 @@
+@use 'colors';
+
+%custom-text {
+  color: colors.$fill;
+  font-family: 'Fredoka One';
+  text-align: center;
+  -webkit-text-stroke: colors.$border 1.25px;
+  text-shadow: 2px 2px colors.$outline,
+    2px -2px colors.$outline,
+    -2px 2px colors.$outline,
+    -2px -2px colors.$outline,
+    0 2.25px colors.$outline,
+    0 -2.25px colors.$outline,
+    2.25px 0 colors.$outline,
+    -2.25px 0 colors.$outline;
+  letter-spacing: 2px;
+  transition: transform .3s, opacity .3s;
+}

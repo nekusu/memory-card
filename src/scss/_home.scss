@@ -1,17 +1,12 @@
-@use 'colors';
+@use 'box';
 @use 'button';
+@use 'colors';
 
 .Home {
-  font-family: 'Kumbh Sans';
-  text-align: center;
-
   .HowToPlay {
+    @extend %box;
     padding: 20px 25px;
-    background-color: colors.$bg;
-    border: 3px solid colors.$border-alt;
-    border-radius: 25px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1),
-      0 12px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
 
     h2 {
       margin-bottom: 10px;
@@ -40,14 +35,11 @@
   }
 
   .GithubButton {
-    @extend %button;
+    @extend %button-alt;
     margin-inline: auto;
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 25px;
-    background-color: #0a2b0d;
-    border-color: #2f550e;
-    text-decoration: none;
+    bottom: 30px;
   }
 }

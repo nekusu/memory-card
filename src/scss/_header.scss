@@ -1,4 +1,4 @@
-@use 'colors';
+@use 'custom-text';
 
 .playing header {
   img {
@@ -36,20 +36,7 @@ header {
   }
 
   h1 {
-    margin-top: -10px;
-    color: colors.$fill;
+    @extend %custom-text;
     font-size: min(6vw, 32px);
-    font-family: 'Fredoka One';
-    text-align: center;
-    -webkit-text-stroke: colors.$border 1px;
-    text-shadow: 2px 2px colors.$outline,
-      2px -2px colors.$outline,
-      -2px 2px colors.$outline,
-      -2px -2px colors.$outline,
-      0 2.25px colors.$outline,
-      0 -2.25px colors.$outline,
-      2.25px 0 colors.$outline,
-      -2.25px 0 colors.$outline;
-    transition: transform .3s, opacity .3s;
   }
 }
