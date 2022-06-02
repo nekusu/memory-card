@@ -1,5 +1,7 @@
+@use 'colors';
 @use 'header';
 @use 'home';
+@use 'game';
 @use 'waves';
 
 .App {
@@ -8,4 +10,41 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(to top, #38498e, #181a41, #111220);
+
+  .Home,
+  .Game {
+    width: fit-content;
+    margin: auto;
+    padding-top: 40px;
+    padding-inline: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn .5s;
+  }
+
+  .Score {
+    position: fixed;
+    top: min(calc(15vh + 10vw), 240px);
+    color: colors.$fill;
+    font-size: min(8vw, 40px);
+    font-family: 'Fredoka One';
+    text-align: center;
+    -webkit-text-stroke: colors.$border 1.5px;
+    text-shadow: 2px 2px colors.$outline,
+      2px -2px colors.$outline,
+      -2px 2px colors.$outline,
+      -2px -2px colors.$outline,
+      0 2.25px colors.$outline,
+      0 -2.25px colors.$outline,
+      2.25px 0 colors.$outline,
+      -2.25px 0 colors.$outline;
+    transition: transform .3s, opacity .3s;
+    animation: slideIn 1s;
+  }
 }
