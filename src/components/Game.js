@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { TwinSpin } from 'react-cssfx-loading';
+import uniqid from 'uniqid';
 import { getCharacter } from '../rickmortyapi';
 import Card from './Card';
 import randomNumber from '../utils/randomNumber';
@@ -8,6 +9,7 @@ import cacheImages from '../utils/cacheImages';
 const maxVisibleCharacters = 3;
 const availableCharacters = 826;
 const randomId = () => randomNumber({ max: availableCharacters });
+const cardKeys = Array(3).fill().map(uniqid);
 
 function Game(props) {
   const {
@@ -75,9 +77,9 @@ function Game(props) {
         ? <TwinSpin color="#cfee78" height="100px" width="100px" />
         : <>
           <div className="Cards">
-            {visibleCharacters.map(({ id, image, name }) => (
+            {visibleCharacters.map(({ id, image, name }, i) => (
               <Card
-                key={id}
+                key={cardKeys[i]}
                 image={image}
                 name={name}
                 handleClick={() => clickCharacter(id)}
