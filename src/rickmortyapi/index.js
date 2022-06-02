@@ -1,0 +1,1 @@
+export { getCharacter } from './character';
