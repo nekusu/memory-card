@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.c5fb4e42.css",
+    "main.js": "/memory-card/static/js/main.60f73fcd.js",
+    "static/media/RickAndMorty.svg": "/memory-card/static/media/RickAndMorty.e2ff6018fb7cf0983ce2f47e7dd13757.svg",
+    "static/media/rick.png": "/memory-card/static/media/rick.e1af966b60b35d2dab74.png",
+    "static/media/morty.png": "/memory-card/static/media/morty.45b09c1cfac7e08b4f2b.png",
+    "index.html": "/memory-card/index.html",
+    "main.c5fb4e42.css.map": "/memory-card/static/css/main.c5fb4e42.css.map",
+    "main.60f73fcd.js.map": "/memory-card/static/js/main.60f73fcd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5fb4e42.css",
+    "static/js/main.60f73fcd.js"
+  ]
+}
