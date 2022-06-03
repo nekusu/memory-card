@@ -9,7 +9,7 @@ import cacheImages from '../utils/cacheImages';
 const maxVisibleCharacters = 3;
 const availableCharacters = 826;
 const randomId = () => randomNumber({ max: availableCharacters });
-const cardKeys = Array(3).fill().map(uniqid);
+const cardKeys = Array(maxVisibleCharacters).fill().map(uniqid);
 
 function Game(props) {
   const {
@@ -48,7 +48,9 @@ function Game(props) {
     while (shuffled.length < maxVisibleCharacters) {
       const randomIndex = randomNumber({ max: items.length - 1 });
       const character = items[randomIndex];
-      if (!indexes.includes(randomIndex) && (clicked < 2 || !character.isClicked)) {
+      if (!indexes.includes(randomIndex)
+        && (clicked < maxVisibleCharacters - 1 || !character.isClicked)
+      ) {
         indexes.push(randomIndex);
         shuffled.push(character);
         clicked += +character.isClicked;
