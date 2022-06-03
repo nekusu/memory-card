@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/memory-card/static/css/main.c5fb4e42.css",
-    "main.js": "/memory-card/static/js/main.60f73fcd.js",
+    "main.css": "/memory-card/static/css/main.5cb441d6.css",
+    "main.js": "/memory-card/static/js/main.4132a160.js",
     "static/media/RickAndMorty.svg": "/memory-card/static/media/RickAndMorty.e2ff6018fb7cf0983ce2f47e7dd13757.svg",
-    "static/media/rick.png": "/memory-card/static/media/rick.e1af966b60b35d2dab74.png",
-    "static/media/morty.png": "/memory-card/static/media/morty.45b09c1cfac7e08b4f2b.png",
+    "static/media/rick.png": "/memory-card/static/media/rick.4131baf9e1065e9db149.png",
+    "static/media/morty.png": "/memory-card/static/media/morty.9b466fc5e96dde3bd0c9.png",
     "index.html": "/memory-card/index.html",
-    "main.c5fb4e42.css.map": "/memory-card/static/css/main.c5fb4e42.css.map",
-    "main.60f73fcd.js.map": "/memory-card/static/js/main.60f73fcd.js.map"
+    "main.5cb441d6.css.map": "/memory-card/static/css/main.5cb441d6.css.map",
+    "main.4132a160.js.map": "/memory-card/static/js/main.4132a160.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5fb4e42.css",
-    "static/js/main.60f73fcd.js"
+    "static/css/main.5cb441d6.css",
+    "static/js/main.4132a160.js"
   ]
 }
