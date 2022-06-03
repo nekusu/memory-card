@@ -11,6 +11,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
   const [score, setScore] = useState(0);
+  const [isAnimationEnabled, setIsAnimationEnabled] = useState(true);
   const play = (difficulty) => {
     setDifficulty(difficulty);
     setIsPlaying(true);
@@ -34,8 +35,13 @@ function App() {
             />
           }
         </>
-        : <Home play={play} />}
-      <Waves />
+        : <Home
+          play={play}
+          isAnimationEnabled={isAnimationEnabled}
+          setIsAnimationEnabled={setIsAnimationEnabled}
+        />
+      }
+      <Waves isAnimationEnabled={isAnimationEnabled} />
     </div>
   );
 }

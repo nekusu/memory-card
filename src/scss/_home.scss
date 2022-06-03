@@ -34,6 +34,18 @@
     }
   }
 
+  .AnimationButton {
+    @extend %button-alt;
+    height: 40px;
+    width: 40px;
+    margin-inline: auto;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+  }
+
   .GithubButton {
     @extend %button-alt;
     margin-inline: auto;

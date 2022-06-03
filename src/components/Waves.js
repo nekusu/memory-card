@@ -35,12 +35,13 @@ const waves = [
 ];
 waves.forEach((wave) => wave.key = uniqid());
 
-function Waves() {
+function Waves({ isAnimationEnabled }) {
   return (
     <div className="Waves">
       {waves.map(({ key, gradient, options }) => (
         <Wave
           key={key}
+          paused={!isAnimationEnabled}
           fill={`url(#${key}-gradient)`}
           opacity={0.95}
           options={{

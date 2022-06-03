@@ -1,7 +1,17 @@
 import Button from './Button';
 import GithubButton from './GithubButton';
+import {
+  RiPauseLine,
+  RiPlayLine,
+} from 'react-icons/ri';
 
-function Home({ play }) {
+function Home(props) {
+  const {
+    play,
+    isAnimationEnabled,
+    setIsAnimationEnabled,
+  } = props;
+
   return (
     <div className="Home">
       <div className="HowToPlay">
@@ -13,6 +23,12 @@ function Home({ play }) {
         <Button label="MEDIUM" handleClick={() => play(20)} />
         <Button label="HARD" handleClick={() => play(30)} />
       </div>
+      <Button
+        className="AnimationButton"
+        icon={isAnimationEnabled ? <RiPauseLine /> : <RiPlayLine />}
+        title={`${isAnimationEnabled ? 'Pause' : 'Play'} animation`}
+        handleClick={() => setIsAnimationEnabled(!isAnimationEnabled)}
+      />
       <GithubButton username="nekusu" />
     </div>
   );
